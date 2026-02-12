@@ -62,11 +62,11 @@ const Navbar = () => {
           {/* Theme Toggle */}
           <motion.button
             whileHover={{ scale: 1.05 }}
-            whileTap={{`relative w-16 h-8 rounded-full border border-accent-purple/30 hover:border-accent-purple/60 transition-all duration-300 ${
+            whileTap={{ scale: 0.95 }}
+            onClick={toggleTheme}
+            className={`relative w-16 h-8 rounded-full border border-accent-purple/30 hover:border-accent-purple/60 transition-all duration-300 ${
               theme === 'dark' ? 'bg-dark-lighter/50' : 'bg-gray-100 shadow-sm'
             }`}
-            onClick={toggleTheme}
-            className="relative w-16 h-8 rounded-full bg-dark-lighter/50 dark:bg-dark-lighter/50 light:bg-gray-100 light:shadow-sm border border-accent-purple/30 hover:border-accent-purple/60 transition-all duration-300"
           >
             <motion.div
               animate={{
